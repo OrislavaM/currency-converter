@@ -71,9 +71,13 @@ function CurrencyConverter() {
     return (
         <div className="container">
             <div className="upper_structure">
-                <h1>Currency</h1>
+                <h1>Currency Converter</h1>
                 <p className="course">
-                    $ = {0}, € = {0}
+                    1$ ={" "}
+                    {formatNumber(
+                        (1 * rates[currencySecond]) / rates[currencyFirst]
+                    )}{" "}
+                    UAH , 1€ = {formatNumber(1 * rates[currencySecond])} UAH
                 </p>
                 <CurrencyInput
                     onAmountChange={handleAmountFirstChange}
