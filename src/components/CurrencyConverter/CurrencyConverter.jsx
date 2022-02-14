@@ -8,6 +8,8 @@ function CurrencyConverter() {
     const [amountSecond, setAmountSecond] = useState(1);
     const [currencyFirst, setCurrencyFirst] = useState("USD");
     const [currencySecond, setCurrencySecond] = useState("UAH");
+    const [currencyUSD, setCurrencyUSD] = useState("USD");
+    const [currencyUAH, setCurrencyUAH] = useState("UAH");
     const [rates, setRates] = useState([]);
 
     useEffect(() => {
@@ -75,9 +77,9 @@ function CurrencyConverter() {
                 <p className="course">
                     1$ ={" "}
                     {formatNumber(
-                        (1 * rates[currencySecond]) / rates[currencyFirst]
+                        (1 * rates[currencyUAH]) / rates[currencyUSD]
                     )}{" "}
-                    UAH , 1€ = {formatNumber(1 * rates[currencySecond])} UAH
+                    UAH, 1€ = {formatNumber(1 * rates[currencyUAH])} UAH
                 </p>
                 <CurrencyInput
                     onAmountChange={handleAmountFirstChange}
