@@ -15,10 +15,10 @@ function CurrencyConverter() {
     useEffect(() => {
         axios
             .get(
-                `http://api.exchangeratesapi.io/v1/latest?access_key=95baf581b57b6f9475df867b64d62c08&symbols=UAH,USD,EUR,CAD,PLN&format=1`
+                `https://v6.exchangerate-api.com/v6/848d85ab91ad4e93a3880a7a/latest/EUR`
             )
             .then((response) => {
-                setRates(response.data.rates);
+                setRates(response.data.conversion_rates);
             });
     }, []);
 
