@@ -16,9 +16,16 @@
 h1 {
     font-size: 40px;
     color: #654ea3;
+    text-align: center;
 }
 
 .course {
-    padding: 15px;
+    padding: 15px 0;
     color: #807c8e;
+}
+
+@media only screen and (max-width: 500px) {
+    .container {
+        width: 250px;
+    }
 }

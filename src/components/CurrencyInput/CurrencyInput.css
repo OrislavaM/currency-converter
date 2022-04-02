@@ -29,3 +29,18 @@ input {
 select {
     width: 120px;
 }
+
+@media only screen and (max-width: 500px) {
+    form {
+        display: flex;
+        justify-content: center;
+    }
+
+    input {
+        width: 100px;
+    }
+
+    select {
+        width: 80px;
+    }
+}
